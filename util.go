@@ -183,7 +183,7 @@ func parseProfile(user legacyUser) Profile {
 	return profile
 }
 
-//It returns the newly created Profile containing a userId
+// It returns the newly created Profile containing a userId
 func parseProfiles(user entrys) Profile {
 	profile := Profile{
 		UserID: user.Content.ItemContent.UserResults.Result.RestID,

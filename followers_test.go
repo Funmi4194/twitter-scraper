@@ -3,6 +3,7 @@ package twitterscraper_test
 import (
 	"context"
 	"testing"
+
 	twitterscraper "github.com/blacheinc/twitter-scraper"
 )
 

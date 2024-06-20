@@ -28,7 +28,6 @@ func main() {
 	if err = scraper.Login("username", "password"); err != nil {
 		return false, err
 	}
-	
     // get the logged in user cookie
 	cookie := scraper.GetCookies()
 
@@ -42,7 +41,7 @@ func main() {
 	}
 
 	followers := scraper.GetFollowers(context.Background(), twitterUserID, profile.FollowersCount)
-	
+  
 	for follower := range followers {
         // you will get the userIds in this format "user-947425510262562817"
         // when checking if a userid is among the return Ids use this
@@ -51,7 +50,6 @@ func main() {
 	}
 }
 ```
-
 
 ### Get favorite tweets
 
@@ -83,7 +81,6 @@ func main() {
     }
 }
 ```
-
 
 ### Get user tweets
 
@@ -166,7 +163,6 @@ The search ends if we have 50 tweets.
 
 See [Rules and filtering](https://developer.twitter.com/en/docs/tweets/rules-and-filtering/overview/standard-operators) for build standard queries.
 
-
 #### Set search mode
 
 ```golang
@@ -175,11 +171,11 @@ scraper.SetSearchMode(twitterscraper.SearchLatest)
 
 Options:
 
-* `twitterscraper.SearchTop` - default mode
-* `twitterscraper.SearchLatest` - live mode
-* `twitterscraper.SearchPhotos` - image mode
-* `twitterscraper.SearchVideos` - video mode
-* `twitterscraper.SearchUsers` - user mode
+- `twitterscraper.SearchTop` - default mode
+- `twitterscraper.SearchLatest` - live mode
+- `twitterscraper.SearchPhotos` - image mode
+- `twitterscraper.SearchVideos` - video mode
+- `twitterscraper.SearchUsers` - user mode
 
 ### Get profile
 
